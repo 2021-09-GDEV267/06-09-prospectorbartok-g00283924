@@ -13,15 +13,11 @@ public enum eFSState
 {
 
     idle,
-
     pre,
-
     active,
-
     post
 
 }
-
 
 
 // FloatingScore can move itself on screen following a Bézier curve
@@ -33,15 +29,9 @@ public class FloatingScore : MonoBehaviour
 
     public eFSState state = eFSState.idle;
 
-
-
     [SerializeField]
-
     protected int _score = 0;
-
     public string scoreString;
-
-
 
 
     // The score property sets both _score and scoreString
@@ -74,13 +64,9 @@ public class FloatingScore : MonoBehaviour
 
 
     public List<Vector2> bezierPts; // Bézier points for movement
-
     public List<float> fontSizes; // Bézier points for font scaling
-
     public float timeStart = -1f;
-
     public float timeDuration = 1f;
-
     public string easingCurve = Easing.InOut; // Uses Easing in Utils.cs
 
 
@@ -92,10 +78,7 @@ public class FloatingScore : MonoBehaviour
 
 
     private RectTransform rectTrans;
-
     private Text txt;
-
-
 
 
 
@@ -107,60 +90,37 @@ public class FloatingScore : MonoBehaviour
     {
 
         rectTrans = GetComponent<RectTransform>();
-
         rectTrans.anchoredPosition = Vector2.zero;
-
-
 
         txt = GetComponent<Text>();
 
-
-
         bezierPts = new List<Vector2>(ePts);
-
-
 
         if (ePts.Count == 1)
         {   // If there's only one point
-
             // ...then just go there.
-
             transform.position = ePts[0];
-
             return;
 
         }
 
-
-
         // If eTimeS is the default, just start at the current time
-
         if (eTimeS == 0) eTimeS = Time.time;
-
         timeStart = eTimeS;
-
         timeDuration = eTimeD;
-
-
 
         state = eFSState.pre; // Set it to the pre state, ready to start moving
 
     }
 
 
-
     public void FSCallback(FloatingScore fs)
     {
 
         // When this callback is called by SendMessage,
-
         //  add the score from the calling FloatingScore
-
         score += fs.score;
-
     }
-
-
 
     // Update is called once per frame
 
