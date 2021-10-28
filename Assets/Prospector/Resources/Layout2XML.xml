@@ -20,26 +20,20 @@
 	<slot id="3" x="-4" y="-2" faceup="1" layer="1" />
 	<slot id="4" x="0" y="-2" faceup="1" layer="1"  />
 	<slot id="5" x="4" y="-2" faceup="1" layer="1"  />
-  <slot id="6" x="-4"  y="-2" faceup="1" layer="1" />
-  <slot id="7" x="0"  y="-2" faceup="1" layer="1" />
-  <slot id="8" x="-4"  y="-2" faceup="1" layer="1"  />
+
 
 	
-	<!-- Layer2, Top layer -->
+	
+  <!-- Layer2, Top layer -->
 	<slot id="9"  x="-4" y="1" faceup="1" layer="2" />
 	<slot id="10" x="0" y="1" faceup="1" layer="2" />
 	<slot id="11" x="4" y="1" faceup="1" layer="2" />
-  <slot id="12" x="-4" y="1" faceup="1" layer="2" />
-  <slot id="13" x="0"  y="1" faceup="1" layer="2" />
-  <slot id="14" x="4"  y="1" faceup="1" layer="2"  />
-  <slot id="15" x="-4"  y="1" faceup="1" layer="2"  />
-  <slot id="16" x="0"  y="1" faceup="1" layer="2"  />
-  <slot id="17" x="4"  y="1" faceup="1" layer="2"  />
+
   
 	
 	<!-- This positions the draw pile and staggers it -->
 	<slot type="drawpile" x="-8" y="0" xstagger="0.02" layer="4"/>
-	
+  <slot type="discardpile" x="7" y="4" layer="5"/>
 	
 </xml>
 	
